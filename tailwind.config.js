@@ -3,7 +3,12 @@ module.exports = {
       "./index.html"
   ],
   theme: {
-    extend: {},
-  },
-  plugins: [],
+    extend: {
+        fontFamily: {
+            'raleway': ['Raleway', 'sans-serif'],
+            'montserrat': ['Montserrat', 'sans-serif']
+        }
+    }
+},
+plugins: [],
 }
