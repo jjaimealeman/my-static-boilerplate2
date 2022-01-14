@@ -3,15 +3,387 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Home | My TailwindCSS Boilerplate</title>
+    <meta name="description" content="An optimized TailwindCSS Boilerplate for simple static HTML/CSS/JS websites." />
+    <meta property="og:title" content="HERE YOU PUT THE TITLE WHICH YOU WANT TO BE DISPLAYED WHEN YOUR PAGE IS LINKED TO" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="YOUR PAGES URL" />
+    <meta property="og:image" content="./assets/images/og-image-facebook-1200x630.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="SITE NAME" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:description" content="YOUR PAGE’S DESCRIPTION. REMEMBER THAT FACEBOOK WILL DISPLAY ONLY ABOUT 300 CHARACTERS OF DESCRIPTION" />
+    <meta name="twitter:title" content="TITLE OF POST OR PAGE" />
+    <meta name="twitter:image" content="./assets/images/og-image-twitter-1024x512.png" />
+    <meta name="twitter:description" content="DESCRIPTION OF PAGE CONTENT" />
+    <meta name="twitter:site" content="@USERNAME" />
+    <meta name="twitter:creator" content="@USERNAME" />
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" sizes="type" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon-192.png">
+    <link rel="manifest" href="/manifest.webmanifest">
 </head>
 
-<body>
-    <div id="app"></div>
+<body class="bg-[#205680] debug-screens">
+
+    <div class="container pb-10 mx-auto bg-white opacity-90">
+
+        <div class="flex items-center justify-center bg-gray-800">
+            <div class="flex space-x-2 group">
+                <img class="group-hover:scale-75 transition hover:!scale-125" src="./src/assets/images/100/100/funsplash-205c481306.jpg" />
+                <img class="group-hover:scale-75 transition hover:!scale-125" src="./src/assets/images/100/100/funsplash-822ff4b2fd.jpg" />
+                <img class="group-hover:scale-75 transition hover:!scale-125" src="./src/assets/images/100/100/funsplash-86fceb9a2f.jpg" />
+                <img class="group-hover:scale-75 transition hover:!scale-125" src="./src/assets/images/100/100/funsplash-8t0YUwvvP8.jpg" />
+                <img class="group-hover:scale-75 transition hover:!scale-125" src="./src/assets/images/100/100/funsplash-e6eeb66bcc.jpg" />
+            </div>
+        </div>
+
+        <nav class="p-4">
+            <ul>
+                <li class="inline mx-4 my-4"><a class="text-xl font-bold text-blue-400 border-b-2 border-blue-400 hover:border-blue-800 hover:text-blue-800 hover:pb-1" href="/" title="Home Page">Home Page</a></li>
+                <li class="inline mx-4 my-4"><a class="text-xl font-bold text-blue-400 border-b-2 border-blue-400 hover:border-blue-800 hover:text-blue-800 hover:pb-1" href="test.html" title="Test Page">Test Page</a></li>
+                <li class="inline mx-4 my-4"><a class="text-xl font-bold text-blue-400 border-b-2 border-blue-400 hover:border-blue-800 hover:text-blue-800 hover:pb-1" href="test.html" title="Test Page">Fake Page</a></li>
+                <li class="inline mx-4 my-4"><a class="text-xl font-bold text-blue-400 border-b-2 border-blue-400 hover:border-blue-800 hover:text-blue-800 hover:pb-1" href="test.html" title="Test Page">Another Fake Page</a></li>
+            </ul>
+        </nav>
+
+        <div class="pb-8 mx-auto text-5xl text-center welcome_message">
+            <h1>Welcome to my Boilerplate!</h1>
+        </div>
+
+        <div class="flex justify-center p-5 mx-auto mb-5 border-2 border-gray-200 rounded w-max">
+            <button class="btn_sm btn_primary">primary</button>
+            <button class="btn_sm btn_secondary">secondary</button>
+            <button class="btn_sm btn_success">success</button>
+            <button class="btn_sm btn_danger">danger</button>
+            <button class="btn_sm btn_warning">warning</button>
+            <button class="btn_sm btn_clear">clear</button>
+        </div>
+        <div class="flex justify-center p-5 mx-auto mb-5 border-2 border-gray-200 rounded w-max">
+            <button class="btn_sm-rd btn_primary">primary</button>
+            <button class="btn_sm-rd btn_secondary">secondary</button>
+            <button class="btn_sm-rd btn_success">success</button>
+            <button class="btn_sm-rd btn_danger">danger</button>
+            <button class="btn_sm-rd btn_warning">warning</button>
+            <button class="btn_sm-rd btn_clear">clear</button>
+        </div>
+        <div class="flex justify-center p-5 mx-auto mb-5 border-2 border-gray-200 rounded w-max">
+            <button class="btn_lg btn_primary">🍔 primary</button>
+            <button class="btn_lg btn_secondary">🌮 secondary</button>
+            <button class="btn_lg btn_success">👍 success</button>
+            <button class="btn_lg btn_danger">🔥 danger</button>
+            <button class="btn_lg btn_warning">🚩 warning</button>
+            <button class="btn_lg btn_clear">❌ clear</button>
+        </div>
+        <div class="flex justify-center p-5 mx-auto mb-5 border-2 border-gray-200 rounded w-max">
+            <button class="btn_lg-rd btn_primary">🍔 primary</button>
+            <button class="btn_lg-rd btn_secondary">🌮 secondary</button>
+            <button class="btn_lg-rd btn_success">👍 success</button>
+            <button class="btn_lg-rd btn_danger">🔥 danger</button>
+            <button class="btn_lg-rd btn_warning">🚩 warning</button>
+            <button class="btn_lg-rd btn_clear">❌ clear</button>
+        </div>
+
+        <div class="w-1/2 py-4 mx-auto">
+            <p class="prose"><a href="#">Lorem ipsum dolor</a> <strong>sit amet consectetur</strong> <em>adipisicing
+          elit</em>. Voluptates blanditiis illum accusamus quod! Eum nulla corrupti fuga ipsa ducimus magnam voluptatem asperiores ex dolores, ad ut quaerat! <a href="#">Obcaecati nobis</a> sed ea quibusdam, dolorum quas numquam possimus provident saepe
+                similique earum facere corrupti sequi repudiandae repellat suscipit quam atque natus explicabo! Odit illum fugiat consequatur iusto.</p>
+            <p class=""><strong>Quae aspernatur</strong> <em>inventore amet</em> <a href="#">quisquam aut officia</a> mollitia saepe debitis consequuntur beatae nam, quo minus quam facilis quibusdam quidem quas magnam error voluptates ut omnis doloremque dicta, explicabo
+                delectus. Culpa quae cumque architecto mollitia, porro possimus repudiandae doloribus commodi hic. Saepe eligendi, facilis, exercitationem eum placeat veniam repellat porro, doloribus eaque voluptatum expedita amet eius.</p>
+            <p class=""><a href="#">Lorem ipsum dolor</a> sit amet <strong>consectetur adipisicing</strong> elit. <em>Delectus
+          odit minus</em> id totam nemo, sit, officiis perferendis, voluptatem vel iste eius quos atque rem! Distinctio aut ut quidem praesentium libero, amet eligendi ducimus sequi eius dignissimos odit sint inventore necessitatibus voluptate ipsam tempore
+                harum eaque, ratione rem accusantium, ipsum voluptatem. Provident illo vitae eius enim?</p>
+        </div>
+
+
+
+        <div class="flex items-center justify-center py-20 space-x-5">
+            <div class="grid w-1/4 grid-rows-2 gap-y-2">
+                <div class="bg-white border-2 border-gray-300 rounded-lg shadow-xl">
+                    <div class="p-5">
+                        <header class="pb-5 text-lg font-semibold">
+                            Welcome Everybody!
+                        </header>
+                        <p class="px-4 pb-10 text-gray-500">
+                            Lorem ipsum dolor sit amet.
+                        </p>
+                        <footer class="space-x-5 text-center">
+                            <button class="btn_lg btn_clear">CANCEL</button>
+                            <button class="btn_lg btn_primary">APPLY</button>
+                        </footer>
+                    </div>
+                </div>
+                <div class="bg-white border-2 border-gray-300 rounded-lg shadow-xl">
+                    <div class="items-center justify-center">
+                        <header class="px-4 py-3 text-sm font-semibold">
+                            Menu Items
+                        </header>
+                        <a href="" class="flex p-3 text-gray-500 hover:bg-blue-100 hover:text-blue-500">
+                            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8 13a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM8 17a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM11 16a1 1 0 1 0 2 0 1 1 0 0 0-2 0ZM16 17a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM11 12a1 1 0 1 0 2 0 1 1 0 0 0-2 0ZM16 13a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM8 7a1 1 0 0 0 0 2h8a1 1 0 1 0 0-2H8Z"
+                  fill="currentColor" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M6 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3H6Zm12 2H6a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1Z"
+                  fill="currentColor" />
+              </svg>
+                            <span class="pl-2">Menu Item 1</span>
+                        </a>
+                        <a href="" class="flex p-3 text-gray-500 hover:bg-blue-100 hover:text-blue-500">
+                            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 9H7V7h10v2ZM7 13h10v-2H7v2Z" fill="currentColor" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M2 18V2h20v16h-6v4h-2a4 4 0 0 1-4-4H2Zm10-2v2a2 2 0 0 0 2 2v-4h6V4H4v12h8Z" fill="currentColor" />
+              </svg>
+                            <span class="pl-2">Menu Item 2</span>
+                        </a>
+                        <a href="" class="flex p-3 text-gray-500 hover:bg-blue-100 hover:text-blue-500">
+                            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M7 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-1 3a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" fill="currentColor" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M3 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h18a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3H3Zm18 2H3a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h4.314l6.878-6.879a3 3 0 0 1 4.243 0L22 15.686V6a1 1 0 0 0-1-1Zm0 14H10.142l5.465-5.464a1 1 0 0 1 1.414 0l4.886 4.886A1 1 0 0 1 21 19Z"
+                  fill="currentColor" />
+              </svg>
+                            <span class="pl-2">Menu Item 3</span>
+                        </a>
+                        <a href="" class="flex p-3 text-gray-500 hover:bg-blue-100 hover:text-blue-500">
+                            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16 9a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm-2 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" fill="currentColor" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1ZM3 12c0 2.09.713 4.014 1.908 5.542A8.986 8.986 0 0 1 12.065 14a8.984 8.984 0 0 1 7.092 3.458A9 9 0 1 0 3 12Zm9 9a8.963 8.963 0 0 1-5.672-2.012A6.992 6.992 0 0 1 12.065 16a6.991 6.991 0 0 1 5.689 2.92A8.964 8.964 0 0 1 12 21Z"
+                  fill="currentColor" />
+              </svg>
+                            <span class="pl-2">Menu Item 4</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-1/4 pb-5 bg-white border-2 border-gray-300 rounded-lg shadow-xl">
+                <img src="./src/assets/images/400/300/funsplash-a6fb7cc6e1.jpg" alt="" class="object-cover w-full rounded-t-lg h-60" />
+                <header class="p-4 text-xl font-extrabold ">Road Trip</header>
+                <div class="px-5">
+                    <p class="px-4 pb-5 text-gray-500">
+                        Quibusdam et et sunt in et nihil quaerat omnis consectetur. Facilis laborum officia aut sunt omnis aut omnis illo deleniti. Ipsa eligendi voluptatibus. Alias blanditiis quia ut sed dolorem repellat inventore sit. Ex quae nihil. Nulla quia non id.
+                    </p>
+                </div>
+                <footer class="px-8 py-3 text-right text-gray-500">
+                    <button class="btn_sm btn_primary">GET STARTED</button>
+                </footer>
+            </div>
+            <div class="w-1/4 p-10 bg-white border-2 border-gray-300 rounded shadow-xl">
+                <img src="./src/assets/images/vectorme.png" alt="" class="mx-auto rounded-lg h-60" />
+                <header class="p-4 text-2xl font-extrabold text-center">
+                    Jaime J. Aleman
+                </header>
+                <div>
+                    <ul class="pb-5 font-semibold text-center text-gray-500">
+                        <li>Father</li>
+                        <li>Web Developer</li>
+                        <li>All around nice guy!</li>
+                    </ul>
+                </div>
+                <footer class="py-6 text-center text-gray-500">
+                    <button class="btn_lg btn_primary">FOLLOW</button>
+                </footer>
+                <section class="flex">
+                    <a href="https://www.facebook.com/jjaimealeman" target="_blank" title="Facebook" class="w-1/3 text-blue-400 hover:text-blue-600"><img src="./src/assets/images/icons/facebook.svg" alt=""></a>
+                    <a href="https://twitter.com/jjaimealeman" target="_blank" title="Twitter" class="w-1/3 text-blue-400 hover:text-blue-600"><img src="./src/assets/images/icons/twitter.svg" alt=""></a>
+                    <a href="https://github.com/OrganizedFellow" target="_blank" title="Github" class="w-1/3 text-blue-400 hover:text-blue-600"><img src="./src/assets/images/icons/github.svg" alt=""></a>
+                </section>
+            </div>
+        </div>
+
+
+        <div class="max-w-lg mx-auto">
+            <div class="flex flex-col">
+                <div class="flex max-w-sm mb-4 bg-yellow-300 rounded-lg">
+                    <div class="w-16 bg-yellow-400 rounded-l-lg">
+                        <div class="p-4">
+                            🔥
+                        </div>
+                    </div>
+                    <div class="items-center w-auto p-4 text-gray-500">
+                        <span class="pb-4 text-lg font-bold">Heads Up!</span>
+                        <p class="leading-tight">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div class="flex max-w-sm mb-4 bg-green-300 rounded-lg">
+                    <div class="w-16 bg-green-400 rounded-l-lg">
+                        <div class="p-4">
+                            🔥
+                        </div>
+                    </div>
+                    <div class="items-center w-auto p-4 text-gray-500">
+                        <span class="pb-4 text-lg font-bold">Heads Up!</span>
+                        <p class="leading-tight">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div class="flex max-w-sm mb-4 bg-blue-300 rounded-lg">
+                    <div class="w-16 bg-blue-400 rounded-l-lg">
+                        <div class="p-4">
+                            🔥
+                        </div>
+                    </div>
+                    <div class="items-center w-auto p-4 text-gray-500">
+                        <span class="pb-4 text-lg font-bold">Heads Up!</span>
+                        <p class="leading-tight">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="max-w-lg mx-auto">
+            <div class="flex p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg" role="alert">
+                <svg class="inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+            clip-rule="evenodd"></path>
+        </svg>
+                <div>
+                    <span class="font-medium">Info!</span>
+                    <p>Join the Club for exclusive offers!</p>
+                </div>
+            </div>
+            <div class="flex p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg" role="alert">
+                <svg class="inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+            clip-rule="evenodd"></path>
+        </svg>
+                <div>
+                    <span class="font-medium">Danger!</span>
+                    <p>Username not accepted - please try again.</p>
+                </div>
+            </div>
+            <div class="flex p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg" role="alert">
+                <svg class="inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+            clip-rule="evenodd"></path>
+        </svg>
+                <div>
+                    <span class="font-medium">Success!</span>
+                    <p>Thanks for joining! Check your email for a Confirmation Message.</p>
+                </div>
+            </div>
+            <div class="flex p-4 mb-4 text-sm text-yellow-700 bg-yellow-100 rounded-lg" role="alert">
+                <svg class="inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+            clip-rule="evenodd"></path>
+        </svg>
+                <div>
+                    <span class="font-medium">Warning!</span>
+                    <p>System will be down for Maintenance from 12pm to 3pm.</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="flex flex-wrap overflow-hidden">
+
+            <div class="w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-3 md:px-3 md:w-1/4">
+                <div class="flex flex-col min-h-full p-2 text-gray-900 bg-gray-100 rounded-md">
+                    <div class="flex flex-col flex-grow">
+                        <img class="rounded" src="./src/assets/images/400/300/funsplash-bc721b7683.jpg" alt="" />
+                        <h2 class="p-2 text-xl font-bold">Canyon River</h2>
+                        <p class="p-2">
+                            Fugit quibusdam perspiciatis cupiditate dicta veniam quas repudiandae ut. Amet quo dicta consequuntur. Cum quia repellat aut. Temporibus qui rerum. Sint repellendus occaecati explicabo voluptates qui vel. Cupiditate voluptatem aliquam natus eius libero
+                            velit.
+                        </p>
+                    </div>
+                    <div class="flex h-24 p-3 overflow-hidden">
+                        <h3 class="w-3/4 px-1 my-1 overflow-hidden text-lg">
+                            <img class="inline w-12 rounded-full" src="./src/assets/images/100/100/funsplash-205c481306.jpg" alt="" /> Dexter Walker
+                        </h3>
+                        <button class="w-1/4 h-8 my-auto overflow-hidden text-center bg-gray-200 border-2 border-gray-300 rounded place-self-end">
+              Article
+            </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-3 md:px-3 md:w-1/4">
+                <div class="flex flex-col min-h-full p-2 text-gray-900 bg-gray-100 rounded-md">
+                    <div class="flex flex-col flex-grow">
+                        <img class="rounded" src="./src/assets/images/400/200/funsplash-7795d52e7c.jpg" alt="" />
+                        <h2 class="p-2 text-xl font-bold">Mountaintop Lake View</h2>
+                        <p class="p-2">
+                            Aut eum quo dolores occaecati vitae placeat non voluptatum. Est animi praesentium magnam natus commodi ducimus. Consequuntur sunt reiciendis.
+                        </p>
+                    </div>
+                    <div class="flex h-24 p-3 overflow-hidden">
+                        <h3 class="w-3/4 px-1 my-1 overflow-hidden text-lg">
+                            <img class="inline w-12 rounded-full" src="./src/assets/images/100/100/funsplash-822ff4b2fd.jpg" alt="" /> Kristin Weimann
+                        </h3>
+                        <button class="w-1/4 h-8 my-auto overflow-hidden text-center bg-gray-200 border-2 border-gray-300 rounded place-self-end">
+              Article
+            </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-3 md:px-3 md:w-1/4">
+                <div class="flex flex-col min-h-full p-2 text-gray-900 bg-gray-100 rounded-md">
+                    <div class="flex flex-col flex-grow">
+                        <img class="rounded" src="./src/assets/images/400/300/funsplash-ea573dc113.jpg" alt="" />
+                        <h2 class="p-2 text-xl font-bold">Highrise View</h2>
+                        <p class="p-2">
+                            Et officia repellendus. Qui sed error ut necessitatibus qui voluptates quo voluptas. Ullam id dignissimos tempore qui sint. Eaque iusto voluptas id fuga aut saepe molestiae. Consequatur eveniet et.
+                        </p>
+                    </div>
+                    <div class="flex h-24 p-3 overflow-hidden">
+                        <h3 class="w-3/4 px-1 my-1 overflow-hidden text-lg">
+                            <img class="inline w-12 rounded-full" src="./src/assets/images/100/100/funsplash-86fceb9a2f.jpg" alt="" /> Tommy Zboncak
+                        </h3>
+                        <button class="w-1/4 h-8 my-auto overflow-hidden text-center bg-gray-200 border-2 border-gray-300 rounded place-self-end">
+              Article
+            </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-3 md:px-3 md:w-1/4">
+                <div class="flex flex-col min-h-full p-2 text-gray-900 bg-gray-100 rounded-md">
+                    <div class="flex flex-col flex-grow">
+                        <img class="rounded" src="./src/assets/images/400/200/funsplash-79902c296d.jpg" alt="" />
+                        <h2 class="p-2 text-xl font-bold">Momma Bear</h2>
+                        <p class="p-2">
+                            Vel nemo qui dignissimos itaque quia mollitia sunt aliquid. Laudantium sit rerum et ut quo et ipsa. Qui cum quidem odio asperiores eos ea eos est qui. Magnam expedita earum illo aut sit id illo eveniet. Odio quam nesciunt dolorem sit quod unde dicta ratione
+                            ullam. Impedit mollitia unde dolore nihil.
+                        </p>
+                    </div>
+                    <div class="flex h-24 p-3 overflow-hidden">
+                        <h3 class="w-3/4 px-1 my-1 overflow-hidden text-lg">
+                            <img class="inline w-12 rounded-full" src="./src/assets/images/100/100/funsplash-e6eeb66bcc.jpg" alt="" /> Thelma Rutherford
+                        </h3>
+                        <button class="w-1/4 h-8 my-auto overflow-hidden text-center bg-gray-200 border-2 border-gray-300 rounded place-self-end">
+              Article
+            </button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <script type="module" src="./src/assets/js/index.js"></script>
     <script type="module" src="/main.js"></script>
-    <h1 class="bg-blue-500">Lorem ipsum dolor sit amet.</h1>
 </body>
 
 </html>
