@@ -50,7 +50,7 @@
 
 @layer components {
 	.btn {
-		@apply inline-block px-8 py-3 text-sm font-semibold text-center transition duration-100 rounded-lg outline-none focus-visible:ring;
+		@apply inline-block px-8 py-3 text-sm font-semibold text-center transition duration-100 rounded-lg outline-none focus-visible:ring drop-shadow-lg;
 
 	}
 	.btn_faded {
