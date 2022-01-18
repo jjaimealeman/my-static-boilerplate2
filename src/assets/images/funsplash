@@ -1,0 +1,107 @@
+#!/bin/bash
+
+# learning to version control my gists
+# funsplash.sh
+
+# Monday, October 25, 2021 @ 08:58:45 PM
+# During the development of a static website, I often need to use an image from Unsplash.
+# It's time-consuming to browse the site and search for something, and then download, resize and move into my working folder.
+# I found this `npm` package https://github.com/MehediH/Bulksplash but it didn't work as I was hoping.
+
+# In my research I found this site https://picsum.photos/ that provides direct downloads from Unsplash with a set width and height.
+# It gave me an idea!
+
+# So I decided to write my own :)
+
+# My script gives options for width and height, from 100px to 900px, and the final option is for fullsize of 1980x1080.
+
+funsplash() {
+    clear
+    printf -- "\n  ========================================\n"
+    printf -- "\n  This script presents you with 2 options:\n"
+    printf -- "\n  1. Choose the width of your photo.\n"
+    printf -- "\n  2. Choose the height of your photo.\n"
+    printf -- "\n  ----------------------------------------\n"
+    read -n 1 -s -r -p "  Press the 'ANY' key to continue - LOL!!!"
+    clear
+    printf -- "\n  =========================================\n"
+    printf -- "\n  How wide would you like your photo to be?\n"
+    declare -a w_options=("100" "200" "300" "400" "500" "600" "700" "800" "900" "1000" "1980")
+    select width in "${w_options[@]}"; do
+        if [[ " ${w_options[*]} " ==  *" ${width} "* ]]; then
+            printf -- "Setting width to %s\n" "${width}"
+        else
+            printf -- "%s is not a valid option.\n" "${REPLY}"
+            return 1
+        fi
+        break
+    done
+    clear
+    printf -- "\n  =========================================\n"
+    printf -- "\n  Now select how high would you like your photo to be?\n"
+    declare -a h_options=("100" "200" "300" "400" "500" "600" "700" "800" "900" "1000" "1080")
+    select height in "${h_options[@]}"; do
+        if [[ " ${h_options[*]} " == *" ${height} "* ]]; then
+            printf -- "  Setting height to %s\n" "${height}"
+        else
+            printf -- "  %s is not a valid option.\n" "${REPLY}"
+            return 1
+        fi
+        break
+    done
+    clear
+    declare dimensions="${width}/${height}"
+    declare filename; filename=funsplash-$(tr -dc A-Za-z0-9 </dev/random | head -c 10 ; echo '')
+    declare https="https://unsplash.it"; declare random="?random"
+    mkdir -p "${width}/${height}"
+    printf -- "\n  =========================================\n"
+    printf -- "\n  Downloading: %s%s%s\n" "${https}/" "${dimensions}/" "${random}"
+    wget -q -O "${width}/${height}/${filename}.jpg" "${https}/${dimensions}/${random}"
+    sleep 1
+    printf -- "\n  Your download is ready.\n"
+    printf -- "\n  Location: %s%s%s.jpg\n" "$(pwd)" "/${dimensions}/" "${filename}"
+    sleep 1
+    printf -- "\n  ----------------------------------------\n"
+    printf -- "\n  Thanks for using funsplash."
+}
+funsplash
+
+# I KNOW THERE ARE MANY WAYS OF GENERATING A HASH, HERE ARE OTHERS
+    # $ cat /proc/sys/kernel/random/uuid | sed 's/[-]//g' | head -c 10; echo
+    # └─> 1eaf38dd88
+    # └─> ed9b6ce52c
+    # └─> 3d4a4da3e1
+    # └─> 92a998e110
+    # $ tr -dc a-f0-9 < /dev/urandom | dd bs=10 count=1 2> /dev/null; echo
+    # └─> 73d22b8da8
+    # └─> 8111a8f0d4
+    # └─> 6d64f1c274
+    # └─> 69d2c7e437
+    # $ tr -dc A-Za-z0-9 </dev/urandom | head -c 10 ; echo
+    # └─> UyEYp2IAuX
+    # └─> hDmPghE0pJ
+    # └─> lLicTDmxfx
+    # └─> Lnml4asaYc
+    # $ cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 10 | head -n 1
+    # └─> mXsgotUkxx
+    # └─> qH2XKTIJ2j
+    # └─> GxVzTnWr5W
+    # └─> aslqZq7msQ
+    # $ date +%s | sha256sum | base64 | head -c 10 ; echo
+    # └─> NzExYjJhMD
+    # └─> MDY0MDMwYT
+    # └─> ZmYwMzMwZT
+    # └─> ZjZkODg2Zm
+
+
+# THIS IS THE VERY FIRST VERSION OF MY SCRIPT.
+# IT OFFERS NO OPTIONS, JUST DOWNLOADS A RANDOM IMAGE AND RESIZES TO 450px and 800px
+# THE NEW VERSION PROVIDES OPTIONS FOR HEIGHT AND WIDTH.
+# function unsplash {
+#     local FILENAME=unsplash-$(cat /proc/sys/kernel/random/uuid | sed 's/[-]//g' | head -c 10;echo)
+#     wget -q -O $FILENAME.jpg https://unsplash.it/1920/1080/?random
+#     echo $FILENAME.jpg
+#     convert -geometry 450x $FILENAME.jpg $FILENAME-450w.jpg | echo
+#     convert -geometry 800x $FILENAME.jpg $FILENAME-800w.jpg
+# }
+# unsplash
