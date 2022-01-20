@@ -82,6 +82,7 @@
         font-family: "Raleway";
         font-style: normal;
         font-weight: 700;
+		font-display: swap;
         src: url("../fonts/raleway-v22-latin-700.eot"); /* IE9 Compat Modes */
         src: local(""),
             url("../fonts/raleway-v22-latin-700.eot?#iefix")
@@ -100,6 +101,7 @@
         font-family: "Montserrat";
         font-style: normal;
         font-weight: 400;
+		font-display: swap;
         src: url("../fonts/montserrat-v18-latin-regular.eot"); /* IE9 Compat Modes */
         src: local(""),
             url("../fonts/montserrat-v18-latin-regular.eot?#iefix")
@@ -121,6 +123,7 @@
         font-family: "Montserrat";
         font-style: italic;
         font-weight: 400;
+		font-display: swap;
         src: url("../fonts/montserrat-v18-latin-italic.eot"); /* IE9 Compat Modes */
         src: local(""),
             url("../fonts/montserrat-v18-latin-italic.eot?#iefix")
@@ -142,6 +145,7 @@
         font-family: "Montserrat";
         font-style: normal;
         font-weight: 500;
+		font-display: swap;
         src: url("../fonts/montserrat-v18-latin-500.eot"); /* IE9 Compat Modes */
         src: local(""),
             url("../fonts/montserrat-v18-latin-500.eot?#iefix")
