@@ -46,27 +46,36 @@
 				</nav>
 				<!-- nav - end -->
 
-				<!-- buttons - start -->
-				<a href="#" class="btn btn_faded">Contact Sales</a>
+				<div class="flex justify-center">
+					<div x-data="{ dropdownOpen: false }" class="relative">
+						<button @click="dropdownOpen = !dropdownOpen" class="inline-flex items-center lg:hidden bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-sky-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2">
+							<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 20 20" fill="currentColor">
+								<path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+							</svg>
+						</button>
 
-				<button type="button" class="inline-flex items-center lg:hidden bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-sky-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2">
-					<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 20 20" fill="currentColor">
-					<path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
-					</svg>
+						<div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 z-10 w-full h-full"></div>
 
-					Menu
-				</button>
+						<div x-show="dropdownOpen" class="absolute right-0 z-20 w-48 py-2 mt-2 bg-white rounded-md shadow-xl">
+							<a href="#" class="block px-4 py-2 text-sm text-gray-700 capitalize hover:bg-sky-500 hover:text-white"> your profile </a>
+							<a href="#" class="block px-4 py-2 text-sm text-gray-700 capitalize hover:bg-sky-500 hover:text-white"> Your projects </a>
+							<a href="#" class="block px-4 py-2 text-sm text-gray-700 capitalize hover:bg-sky-500 hover:text-white"> Help </a>
+							<a href="#" class="block px-4 py-2 text-sm text-gray-700 capitalize hover:bg-sky-500 hover:text-white"> Settings </a>
+							<a href="#" class="block px-4 py-2 text-sm text-gray-700 capitalize hover:bg-sky-500 hover:text-white"> Sign Out </a>
+						</div>
+					</div>
+				</div>
 				<!-- buttons - end -->
 			</header>
 
 			<section class="flex flex-col justify-between gap-6 lg:flex-row sm:gap-10 md:gap-16">
 				<!-- content - start -->
 				<div class="flex flex-col justify-center xl:w-5/12 sm:text-center lg:text-left lg:py-12 xl:py-24">
-					<p class="mb-4 font-semibold text-sky-500 md:text-lg xl:text-xl md:mb-6">Very proud to introduce</p>
+					<p class="mb-4 font-semibold text-sky-500 md:text-lg xl:text-xl md:mb-6">Hi, Hello, Hola, Howdy!</p>
 
-					<h1 class="mb-8 text-4xl font-bold text-black-800 sm:text-5xl md:text-6xl md:mb-12">Revolutionary way to build the web</h1>
+					<h1 class="mb-8 text-4xl font-bold text-black-800 sm:text-5xl md:text-6xl md:mb-12">We're in this together!</h1>
 
-					<p class="mb-8 leading-relaxed text-gray-500 lg:w-4/5 xl:text-lg md:mb-12">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random.</p>
+					<p class="mb-8 leading-relaxed text-gray-500 lg:w-4/5 xl:text-lg md:mb-12">A simple 3 page boilerplate with TailwindCSS &amp; Vite for speedy static site devlopment. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero nesciunt nulla dolores officia, culpa odit?</p>
 
 					<div class="flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-2.5">
 						<a href="#" class="btn btn_primary">Start now</a>
@@ -91,9 +100,10 @@
 		<div class="px-4 mx-auto max-w-screen-2xl md:px-8">
 			<!-- text - start -->
 			<div class="mb-10 md:mb-16">
-				<h2 class="mb-4 text-2xl font-bold text-center text-gray-800 lg:text-3xl md:mb-6">Our competitive advantage</h2>
+				<h2 class="mb-4 text-2xl font-bold text-center text-gray-800 lg:text-3xl md:mb-6">Section 1: Features</h2>
 
-				<p class="max-w-screen-md mx-auto text-center text-gray-500 md:text-lg">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated.</p>
+				<p class="max-w-screen-md mx-auto text-center text-gray-500 md:text-lg">A simple section of Features, SVG's, and Lorem Ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit perspiciatis, eveniet perferendis asperiores animi illo nobis optio itaque sed laudantium tempore! <br >
+				SVGs taken from <a href="https://www.svgrepo.com/">SVG Repo</a></p>
 			</div>
 			<!-- text - end -->
 
@@ -101,12 +111,11 @@
 				<!-- feature - start -->
 				<div class="flex gap-4 md:gap-6">
 					<div class="flex items-center justify-center w-12 h-12 text-white bg-green-500 rounded-lg shadow-lg md:w-14 md:h-14 shrink-0 md:rounded-xl">
-						<!-- <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /> </svg> -->
 						<svg class="w-6 h-6" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve"><path d="M489.834 385.299h-41.733V102.505c0-11.152-8.671-20.135-19.823-20.135h-43.851c-11.152 0-20.555 8.983-20.555 20.135v282.794h-62.063v-179.14c0-11.152-8.664-20.349-19.816-20.349h-43.849c-11.152 0-20.564 9.197-20.564 20.349v179.14h-62.063V276.281c0-11.152-8.656-19.543-19.809-19.543h-43.85c-11.152 0-20.57 8.39-20.57 19.543v109.017H22.166C9.924 385.299 0 395.223 0 407.464s9.924 22.166 22.166 22.166h467.669c12.241 0 22.166-9.924 22.166-22.166s-9.924-22.165-22.167-22.165z"/></svg>
 					</div>
 					<div>
-						<h3 class="mb-2 text-lg font-semibold md:text-xl">Growth</h3>
-						<p class="mb-2 text-gray-500">Filler text is dummy text which has no meaning however looks very similar to real text.</p>
+						<h3 class="mb-2 text-lg font-semibold md:text-xl">Money</h3>
+						<p class="mb-2 text-gray-500">Guaranteed to earn you $1,000,000 in 6 months time.</p>
 						<a href="#" class="font-bold transition duration-100 text-sky-500 hover:text-sky-600 active:text-sky-700">More</a>
 					</div>
 				</div>
@@ -115,12 +124,11 @@
 				<!-- feature - start -->
 				<div class="flex gap-4 md:gap-6">
 					<div class="flex items-center justify-center w-12 h-12 text-white bg-pink-500 rounded-lg shadow-lg md:w-14 md:h-14 shrink-0 md:rounded-xl">
-						<!-- <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /> </svg> -->
 						<svg class="w-6 h-6" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.469 65.469" style="enable-background:new 0 0 65.469 65.469" xml:space="preserve"><path d="M50.504 23.929h-.603v-6.762C49.902 7.701 42.202 0 32.736 0S15.569 7.701 15.569 17.167v6.762h-.604c-5.401 0-9.796 4.395-9.796 9.797v21.946c0 5.402 4.395 9.797 9.796 9.797h35.54c5.401 0 9.796-4.395 9.796-9.797V33.726c-.001-5.402-4.396-9.797-9.797-9.797zm-28.935-6.762C21.569 11.01 26.577 6 32.736 6c6.157 0 11.166 5.009 11.166 11.167v6.762H21.569v-6.762zM54.3 55.673a3.8 3.8 0 0 1-3.796 3.797H14.965a3.8 3.8 0 0 1-3.796-3.797V33.726a3.8 3.8 0 0 1 3.796-3.797h35.54a3.8 3.8 0 0 1 3.796 3.797L54.3 55.673z"/><path d="M32.734 37.163a6.014 6.014 0 0 0-6.014 6.014 6.008 6.008 0 0 0 3.014 5.207v6.686h6v-6.686a6.008 6.008 0 0 0 3.014-5.207 6.014 6.014 0 0 0-6.014-6.014z"/></svg>
 					</div>
 					<div>
-						<h3 class="mb-2 text-lg font-semibold md:text-xl">Security</h3>
-						<p class="mb-2 text-gray-500">Filler text is dummy text which has no meaning however looks very similar to real text.</p>
+						<h3 class="mb-2 text-lg font-semibold md:text-xl">Privacy</h3>
+						<p class="mb-2 text-gray-500">Your privacy and security is important to use, so we use 256-bit encryotion.</p>
 						<a href="#" class="font-bold transition duration-100 text-sky-500 hover:text-sky-600 active:text-sky-700">More</a>
 					</div>
 				</div>
@@ -129,12 +137,11 @@
 				<!-- feature - start -->
 				<div class="flex gap-4 md:gap-6">
 					<div class="flex items-center justify-center w-12 h-12 text-white rounded-lg shadow-lg bg-sky-500 md:w-14 md:h-14 shrink-0 md:rounded-xl">
-						<!-- <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /> </svg> -->
 						<svg class="w-6 h-6" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve"><path d="M489.579 254.766c-12.942-16.932-30.829-29.887-50.839-36.933-.828-48.454-40.501-87.618-89.148-87.618a88.53 88.53 0 0 0-22.647 2.958c-12.102-15.076-27.37-27.615-44.441-36.457-19.642-10.173-40.881-15.331-63.127-15.331-74.705 0-135.736 59.676-137.931 133.859C33.885 227.82 0 271.349 0 321.107c0 60.383 49.125 109.508 109.508 109.508h292.983C462.875 430.615 512 381.49 512 321.107c0-24.211-7.754-47.151-22.421-66.341zm-87.088 160.295H109.508c-51.806 0-93.953-42.147-93.953-93.953 0-44.549 31.647-83.274 75.248-92.079l6.342-1.281-.106-6.47a25.09 25.09 0 0 0-.069-1.38c-.012-.173-.031-.344-.031-.52 0-67.512 54.925-122.437 122.436-122.437 39.135 0 75.005 18.162 98.411 49.828l3.349 4.53 5.348-1.769c7.542-2.494 15.317-3.759 23.108-3.759 40.587 0 73.606 33.019 73.606 73.607 0 .645-.05 1.382-.103 2.164a95.1 95.1 0 0 0-.093 1.518l-.303 6.145 5.911 1.709c19.171 5.544 36.435 17.369 48.61 33.297 12.577 16.453 19.224 36.127 19.224 56.895.002 51.807-42.146 93.955-93.952 93.955z"/><path d="M135.62 193.401h15.555c0-26.66 21.69-48.35 48.351-48.35v-15.555c-35.237-.001-63.906 28.667-63.906 63.905z"/></svg>
 						</div>
 					<div>
-						<h3 class="mb-2 text-lg font-semibold md:text-xl">Cloud</h3>
-						<p class="mb-2 text-gray-500">Filler text is dummy text which has no meaning however looks very similar to real text.</p>
+						<h3 class="mb-2 text-lg font-semibold md:text-xl">WebSync</h3>
+						<p class="mb-2 text-gray-500">All your data is accessible throughout the web on all your devices for FREE.</p>
 						<a href="#" class="font-bold transition duration-100 text-sky-500 hover:text-sky-600 active:text-sky-700">More</a>
 					</div>
 				</div>
@@ -143,13 +150,12 @@
 				<!-- feature - start -->
 				<div class="flex gap-4 md:gap-6">
 					<div class="flex items-center justify-center w-12 h-12 text-white bg-yellow-500 rounded-lg shadow-lg md:w-14 md:h-14 shrink-0 md:rounded-xl">
-						<!-- <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /> </svg> -->
 						<svg class="w-6 h-6" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 415 415" style="enable-background:new 0 0 415 415" xml:space="preserve"><path d="M325.662 3.768A7.498 7.498 0 0 0 319.157 0H164.555a7.501 7.501 0 0 0-7.107 5.102L91.19 201.421a7.502 7.502 0 0 0 7.107 9.898h62.812L88.817 404.876a7.5 7.5 0 0 0 12.779 7.437l201.228-240.49a7.5 7.5 0 0 0-5.752-12.313h-58.094l86.654-148.224a7.499 7.499 0 0 0 .03-7.518zM219.429 163.223a7.499 7.499 0 0 0-.03 7.518 7.498 7.498 0 0 0 6.505 3.768h55.111L118.189 369.107l60.754-162.664a7.499 7.499 0 0 0-7.026-10.124h-63.173L169.939 15h136.145l-86.655 148.223z"/></svg>
 					</div>
 
 					<div>
-						<h3 class="mb-2 text-lg font-semibold md:text-xl">Speed</h3>
-						<p class="mb-2 text-gray-500">Filler text is dummy text which has no meaning however looks very similar to real text.</p>
+						<h3 class="mb-2 text-lg font-semibold md:text-xl">Ligntning Fast</h3>
+						<p class="mb-2 text-gray-500">Over 250Mb/sec speeds accessible through our cloud infrasructure provides the fastest speeds available world wide.</p>
 						<a href="#" class="font-bold transition duration-100 text-sky-500 hover:text-sky-600 active:text-sky-700">More</a>
 					</div>
 				</div>
@@ -158,13 +164,12 @@
 				<!-- feature - start -->
 				<div class="flex gap-4 md:gap-6">
 					<div class="flex items-center justify-center w-12 h-12 text-white rounded-lg shadow-lg bg-fuchsia-500 md:w-14 md:h-14 shrink-0 md:rounded-xl">
-						<!-- <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" /> </svg> -->
 						<svg class="w-6 h-6" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M409.706 70.294C364.375 24.964 304.106 0 240 0S115.625 24.964 70.294 70.294 0 175.894 0 240s24.964 124.376 70.294 169.706S175.894 480 240 480s124.375-24.964 169.706-70.294S480 304.106 480 240s-24.964-124.376-70.294-169.706zm39.867 102.472h-101.89a127.968 127.968 0 0 0-40.448-40.448V30.427c32.958 10.533 63.159 28.839 88.329 54.009 25.17 25.171 43.476 55.372 54.009 88.33zM460 240c0 16.079-1.725 31.891-5.065 47.234h-97.061c5.875-14.609 9.116-30.549 9.116-47.234s-3.241-32.626-9.116-47.234h97.061A221.912 221.912 0 0 1 460 240zM240 346.99c-58.995 0-106.991-47.995-106.991-106.99S181.005 133.01 240 133.01 346.99 181.005 346.99 240 298.995 346.99 240 346.99zM20 240c0-16.079 1.725-31.891 5.065-47.234h97.06c-5.875 14.609-9.116 30.549-9.116 47.234s3.241 32.626 9.116 47.234h-97.06A221.912 221.912 0 0 1 20 240zM287.234 25.065v97.061c-14.609-5.875-30.549-9.116-47.234-9.116s-32.626 3.241-47.234 9.116V25.065C208.109 21.725 223.921 20 240 20s31.891 1.725 47.234 5.065zM84.437 84.437c25.171-25.17 55.371-43.476 88.329-54.009v101.89a127.992 127.992 0 0 0-40.449 40.448H30.427c10.533-32.958 28.839-63.159 54.01-88.329zm-54.01 222.797h101.89a127.981 127.981 0 0 0 40.449 40.448v101.89c-32.958-10.533-63.159-28.839-88.329-54.009-25.171-25.17-43.477-55.371-54.01-88.329zm162.339 147.701v-97.061c14.609 5.875 30.549 9.116 47.234 9.116s32.626-3.241 47.234-9.116v97.061C271.891 458.275 256.079 460 240 460s-31.891-1.725-47.234-5.065zm202.797-59.372c-25.171 25.17-55.371 43.476-88.329 54.009v-101.89a127.978 127.978 0 0 0 40.448-40.448h101.89c-10.532 32.958-28.838 63.159-54.009 88.329z"/></svg>
 					</div>
 
 					<div>
-						<h3 class="mb-2 text-lg font-semibold md:text-xl">Support</h3>
-						<p class="mb-2 text-gray-500">Filler text is dummy text which has no meaning however looks very similar to real text.</p>
+						<h3 class="mb-2 text-lg font-semibold md:text-xl">Life Raft</h3>
+						<p class="mb-2 text-gray-500">Many life rafts are designed to float above water with the minimalist of effort, but have you seen on that can float on air?</p>
 						<a href="#" class="font-bold transition duration-100 text-sky-500 hover:text-sky-600 active:text-sky-700">More</a>
 					</div>
 				</div>
@@ -173,7 +178,6 @@
 				<!-- feature - start -->
 				<div class="flex gap-4 md:gap-6">
 					<div class="flex items-center justify-center w-12 h-12 text-white bg-gray-500 rounded-lg shadow-lg md:w-14 md:h-14 shrink-0 md:rounded-xl">
-						<!-- <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /> </svg> -->
 						<svg class="w-6 h-6" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470.208 470.208" style="enable-background:new 0 0 470.208 470.208" xml:space="preserve"><path d="M467.6 309.093c-2.6-2.8-6.6-3.9-10.3-2.8-19.2 5.8-40.8 8.8-62.6 8.8-123.1 0-223.2-98.3-223.2-219.1 0-26.8 5.1-53.8 15.7-82.4 1.3-3.6.5-7.5-2.1-10.3-2.6-2.8-6.5-3.8-10.1-2.8-50.8 14.7-94.5 44.5-126.3 86.4-31.9 41.9-48.7 91.7-48.7 144.1 0 131.8 109.5 239.1 244.2 239.1 48.7 0 95.7-14.2 136.3-41.2 40.4-27 71.2-64.8 89-109.3 1.4-3.6.7-7.7-1.9-10.5zm-223.4 141c-123.6 0-224.2-98.3-224.2-219.1 0-90.6 57.4-172.3 141.9-205-7.1 23.8-10.5 46.9-10.6 70 0 64 25.3 124.1 71.3 169.2 45.9 45.1 106.9 69.9 171.9 69.9 16.3 0 32.5-1.6 47.8-4.6-37.3 72.3-114.5 119.6-198.1 119.6z"/></svg>
 					</div>
 
@@ -274,11 +278,10 @@
 				<!-- person - start -->
 				<div class="flex flex-col items-center p-4 bg-gray-100 rounded-lg lg:p-8">
 					<div class="w-24 h-24 mb-2 overflow-hidden bg-gray-200 rounded-full shadow-lg md:w-32 md:h-32 md:mb-4">
-						<!-- <img src="./src/assets/images/photo-1567515004624-219c11d31f2e.jpeg" loading="lazy" alt="Photo by Radu Florin" class="object-cover object-center w-full h-full" /> -->
-						<img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-svgrepo-com.min.svg" alt="John McCulling" />
+						<img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-svgrepo-com.min.svg" alt="Wilfred Kimball" />
 					</div>
 					<div>
-						<div class="font-bold text-center text-sky-500 md:text-lg">John McCulling</div>
+						<div class="font-bold text-center text-sky-500 md:text-lg">Wilfred Kimball</div>
 						<p class="mb-3 text-sm text-center text-gray-500 md:text-base md:mb-4">Founder / CEO</p>
 						<!-- social - start -->
 						<div class="flex justify-center">
@@ -303,13 +306,12 @@
 				<!-- person - start -->
 				<div class="flex flex-col items-center p-4 bg-gray-100 rounded-lg lg:p-8">
 					<div class="w-24 h-24 mb-2 overflow-hidden bg-gray-200 rounded-full shadow-lg md:w-32 md:h-32 md:mb-4">
-					<!-- <img src="./src/assets/images/photo-1532073150508-0c1df022bdd1.jpeg" loading="lazy" alt="Photo by christian ferrer" class="object-cover object-center w-full h-full" /> -->
-					<img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-10-svgrepo-com.min.svg" alt="Kate Berg">
+					<img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-10-svgrepo-com.min.svg" alt="Nancy Marlow">
 					</div>
 
 					<div>
-						<div class="font-bold text-center text-sky-500 md:text-lg">Kate Berg</div>
-						<p class="mb-3 text-sm text-center text-gray-500 md:text-base md:mb-4">CFO</p>
+						<div class="font-bold text-center text-sky-500 md:text-lg">Nancy Marlow</div>
+						<p class="mb-3 text-sm text-center text-gray-500 md:text-base md:mb-4">Legacy Implementation Coordinator</p>
 						<!-- social - start -->
 						<div class="flex justify-center">
 							<div class="flex gap-4">
@@ -333,12 +335,11 @@
 				<!-- person - start -->
 				<div class="flex flex-col items-center p-4 bg-gray-100 rounded-lg lg:p-8">
 					<div class="w-24 h-24 mb-2 overflow-hidden bg-gray-200 rounded-full shadow-lg md:w-32 md:h-32 md:mb-4">
-						<!-- <img src="./src/assets/images/photo-1463453091185-61582044d556.jpeg" loading="lazy" alt="Photo by Ayo Ogunseinde" class="object-cover object-center w-full h-full" /> -->
-						<img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-11-svgrepo-com.min.svg" alt="Greg Jackson">
+						<img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-11-svgrepo-com.min.svg" alt="Terrence Shelley">
 					</div>
 					<div>
-						<div class="font-bold text-center text-sky-500 md:text-lg">Greg Jackson</div>
-						<p class="mb-3 text-sm text-center text-gray-500 md:text-base md:mb-4">CTO</p>
+						<div class="font-bold text-center text-sky-500 md:text-lg">Terrence Shelley</div>
+						<p class="mb-3 text-sm text-center text-gray-500 md:text-base md:mb-4">Dynamic Integration Associate</p>
 						<!-- social - start -->
 						<div class="flex justify-center">
 							<div class="flex gap-4">
@@ -362,12 +363,11 @@
 				<!-- person - start -->
 				<div class="flex flex-col items-center p-4 bg-gray-100 rounded-lg lg:p-8">
 					<div class="w-24 h-24 mb-2 overflow-hidden bg-gray-200 rounded-full shadow-lg md:w-32 md:h-32 md:mb-4">
-					<!-- <img src="./src/assets/images/photo-1529068755536-a5ade0dcb4e8.jpeg" loading="lazy" alt="Photo by Midas Hofstra" class="object-cover object-center w-full h-full" /> -->
-					<img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-12-svgrepo-com.min.svg" alt="Robert Greyson" />
+					<img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-12-svgrepo-com.min.svg" alt="Malcom Curtis" />
 					</div>
 					<div>
-						<div class="font-bold text-center text-sky-500 md:text-lg">Robert Greyson</div>
-						<p class="mb-3 text-sm text-center text-gray-500 md:text-base md:mb-4">Creative Director</p>
+						<div class="font-bold text-center text-sky-500 md:text-lg">Malcom Curtis</div>
+						<p class="mb-3 text-sm text-center text-gray-500 md:text-base md:mb-4">Regional Research Assistant</p>
 
 						<!-- social - start -->
 						<div class="flex justify-center">
@@ -392,12 +392,11 @@
 				<!-- person - start -->
 				<div class="flex flex-col items-center p-4 bg-gray-100 rounded-lg lg:p-8">
 					<div class="w-24 h-24 mb-2 overflow-hidden bg-gray-200 rounded-full shadow-lg md:w-32 md:h-32 md:mb-4">
-						<!-- <img src="./src/assets/images/photo-1522529599102-193c0d76b5b6.jpeg" loading="lazy" alt="Photo by Elizeu Dias" class="object-cover object-center w-full h-full" /> -->
-						<img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-8-svgrepo-com.min.svg" alt="John Roberts" />
+						<img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-8-svgrepo-com.min.svg" alt="Denton Kenzie" />
 					</div>
 					<div>
-						<div class="font-bold text-center text-sky-500 md:text-lg">John Roberts</div>
-						<p class="mb-3 text-sm text-center text-gray-500 md:text-base md:mb-4">Investor Relations</p>
+						<div class="font-bold text-center text-sky-500 md:text-lg">Denton Kenzie</div>
+						<p class="mb-3 text-sm text-center text-gray-500 md:text-base md:mb-4">Senior Optimization Producer</p>
 						<!-- social - start -->
 						<div class="flex justify-center">
 							<div class="flex gap-4">
@@ -421,12 +420,11 @@
 				<!-- person - start -->
 				<div class="flex flex-col items-center p-4 bg-gray-100 rounded-lg lg:p-8">
 					<div class="w-24 h-24 mb-2 overflow-hidden bg-gray-200 rounded-full shadow-lg md:w-32 md:h-32 md:mb-4">
-						<!-- <img src="./src/assets/images/photo-1488426862026-3ee34a7d66df.jpeg" loading="lazy" alt="Photo by Matheus Ferrero" class="object-cover object-center w-full h-full" /> -->
-						<img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-14-svgrepo-com.min.svg" alt="Judy Amandez" />
+						<img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-14-svgrepo-com.min.svg" alt="Arlene Sloan" />
 					</div>
 					<div>
-						<div class="font-bold text-center text-sky-500 md:text-lg">Judy Amandez</div>
-						<p class="mb-3 text-sm text-center text-gray-500 md:text-base md:mb-4">Senior Art Director</p>
+						<div class="font-bold text-center text-sky-500 md:text-lg">Arlene Sloan</div>
+						<p class="mb-3 text-sm text-center text-gray-500 md:text-base md:mb-4">Human Directives Associate</p>
 						<!-- social - start -->
 						<div class="flex justify-center">
 							<div class="flex gap-4">
@@ -450,14 +448,13 @@
 				<!-- person - start -->
 				<div class="flex flex-col items-center p-4 bg-gray-100 rounded-lg lg:p-8">
 					<div class="w-24 h-24 mb-2 overflow-hidden bg-gray-200 rounded-full shadow-lg md:w-32 md:h-32 md:mb-4">
-						<!-- <img src="./src/assets/images/photo-1566492031773-4f4e44671857.jpeg" loading="lazy" alt="Photo by Leilani Angel" class="object-cover object-center w-full h-full" /> -->
-						<!-- <img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-2-svgrepo-com.min.svg" alt="Rahul Williams" /> -->
-						<img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-7-svgrepo-com.min.svg" alt="Judy Amandez" />
+						<!-- <img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-2-svgrepo-com.min.svg" alt="Tyler Johnson" /> -->
+						<img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-7-svgrepo-com.min.svg" alt="Arlene Sloan" />
 					</div>
 
 					<div>
-						<div class="font-bold text-center text-sky-500 md:text-lg">Rahul Williams</div>
-						<p class="mb-3 text-sm text-center text-gray-500 md:text-base md:mb-4">Creative Director</p>
+						<div class="font-bold text-center text-sky-500 md:text-lg">Tyler Johnson</div>
+						<p class="mb-3 text-sm text-center text-gray-500 md:text-base md:mb-4">Internal Functionality Associate</p>
 
 						<!-- social - start -->
 						<div class="flex justify-center">
@@ -482,13 +479,12 @@
 				<!-- person - start -->
 				<div class="flex flex-col items-center p-4 bg-gray-100 rounded-lg lg:p-8">
 					<div class="w-24 h-24 mb-2 overflow-hidden bg-gray-200 rounded-full shadow-lg md:w-32 md:h-32 md:mb-4">
-					<!-- <img src="./src/assets/images/photo-1562904403-a5106bef8319.jpeg" loading="lazy" alt="Photo by Jernej Graj" class="object-cover object-center w-full h-full" /> -->
-					<img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-4-svgrepo-com.min.svg" alt="Judy Amandez" />
+					<img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-4-svgrepo-com.min.svg" alt="Arlene Sloan" />
 					</div>
 
 					<div>
-						<div class="font-bold text-center text-sky-500 md:text-lg">Ari Ferris</div>
-						<p class="mb-3 text-sm text-center text-gray-500 md:text-base md:mb-4">Marketing Analyst</p>
+						<div class="font-bold text-center text-sky-500 md:text-lg">Patsy Rory</div>
+						<p class="mb-3 text-sm text-center text-gray-500 md:text-base md:mb-4">Relational Assurance Designerv</p>
 
 						<!-- social - start -->
 						<div class="flex justify-center">
@@ -525,12 +521,11 @@
 					<div class="text-center text-gray-600">“This is a section of some simple filler text, also known as placeholder text.”</div>
 					<div class="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
 						<div class="w-12 h-12 overflow-hidden bg-gray-100 rounded-full shadow-lg md:w-14 md:h-14">
-							<!-- <img src="./src/assets/images/photo-1567515004624-219c11d31f2e-t.jpeg" loading="lazy" alt="Photo by Radu Florin" class="object-cover object-center w-full h-full" /> -->
-							<img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-svgrepo-com.min.svg" alt="John McCulling" />
+							<img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-svgrepo-com.min.svg" alt="Wilfred Kimball" />
 						</div>
 						<div>
-							<div class="text-sm font-bold text-center text-sky-500 md:text-base sm:text-left">John McCulling</div>
-							<p class="text-sm text-center text-gray-500 md:text-sm sm:text-left">CEO / Datadrift</p>
+							<div class="text-sm font-bold text-center text-sky-500 md:text-base sm:text-left">Wilfred Kimball</div>
+							<p class="text-sm text-center text-gray-500 md:text-sm sm:text-left">CEO / Jurassic Park</p>
 						</div>
 					</div>
 				</div>
@@ -541,12 +536,11 @@
 					<div class="text-center text-gray-600">“This is a section of some simple filler text, also known as placeholder text.”</div>
 					<div class="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
 						<div class="w-12 h-12 overflow-hidden bg-gray-100 rounded-full shadow-lg md:w-14 md:h-14">
-							<!-- <img src="./src/assets/images/photo-1532073150508-0c1df022bdd1-t.jpeg" loading="lazy" alt="Photo by christian ferrer" class="object-cover object-center w-full h-full" /> -->
-							<img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-10-svgrepo-com.min.svg" alt="Kate Berg" />
+							<img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-10-svgrepo-com.min.svg" alt="Nancy Marlow" />
 						</div>
 						<div>
-							<div class="text-sm font-bold text-center text-sky-500 md:text-base sm:text-left">Kate Berg</div>
-							<p class="text-sm text-center text-gray-500 md:text-sm sm:text-left">CFO / Dashdash</p>
+							<div class="text-sm font-bold text-center text-sky-500 md:text-base sm:text-left">Nancy Marlow</div>
+							<p class="text-sm text-center text-gray-500 md:text-sm sm:text-left">CFO / Sector Nine</p>
 						</div>
 					</div>
 				</div>
@@ -557,12 +551,11 @@
 					<div class="text-center text-gray-600">“This is a section of some simple filler text, also known as placeholder text.”</div>
 					<div class="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
 						<div class="w-12 h-12 overflow-hidden bg-gray-100 rounded-full shadow-lg md:w-14 md:h-14">
-							<!-- <img src="./src/assets/images/photo-1463453091185-61582044d556-t.jpeg" loading="lazy" alt="Photo by Ayo Ogunseinde" class="object-cover object-center w-full h-full" /> -->
-							<img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-11-svgrepo-com.min.svg" alt="Greg Jackson" />
+							<img class="object-cover object-center w-full h-full" src="./src/assets/images/icons/account-avatar-profile-user-11-svgrepo-com.min.svg" alt="Terrence Shelley" />
 						</div>
 						<div>
-							<div class="text-sm font-bold text-center text-sky-500 md:text-base sm:text-left">Greg Jackson</div>
-							<p class="text-sm text-center text-gray-500 md:text-sm sm:text-left">CTO / Uptime</p>
+							<div class="text-sm font-bold text-center text-sky-500 md:text-base sm:text-left">Terrence Shelley</div>
+							<p class="text-sm text-center text-gray-500 md:text-sm sm:text-left">CTO / Planetary Defense</p>
 						</div>
 					</div>
 				</div>
@@ -722,8 +715,32 @@
 	</div>
 	<!-- footer - end -->
 
+	<div class="card-body"><a href="#" class="card-link btn btn-info">edit campground</a></div>
+
+	<script src="//unpkg.com/alpinejs" defer></script>
 	<script type="module" src="/main.js"></script>
+	<script>
+		/* When the user clicks on the button,
+		toggle between hiding and showing the dropdown content */
+		function myFunction() {
+		  document.getElementById("myDropdown").classList.toggle("show");
+		}
+
+		// Close the dropdown if the user clicks outside of it
+		window.onclick = function(event) {
+		  if (!event.target.matches('.dropbtn')) {
+			var dropdowns = document.getElementsByClassName("dropdown-content");
+			var i;
+			for (i = 0; i < dropdowns.length; i++) {
+			  var openDropdown = dropdowns[i];
+			  if (openDropdown.classList.contains('show')) {
+				openDropdown.classList.remove('show');
+			  }
+			}
+		  }
+		}
+	</script>
 </body>
 
 </html>
-<!-- 731 -->
+<!-- 713 -->
