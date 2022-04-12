@@ -23,5 +23,5 @@ git clone https://github.com/jjaimealeman/my-static-boilerplate2.github
 cd my-static-boilerplate2
 npm install
 ```
-
-
+Live demo:
+https://my-static-boilerplate2.netlify.app/
