@@ -54,10 +54,10 @@
 
 	}
 	.btn_faded {
-		@apply  text-gray-500 ring-gray-500 bg-gray-200 hover:bg-gray-300 active:text-gray-700 py-3 md:text-base;
+		@apply  text-slate-700 ring-slate-500 bg-slate-300 hover:bg-slate-300 active:text-slate-700 py-3 md:text-base;
 	}
 	.btn_primary {
-		@apply  text-white ring-indigo-300 bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 md:text-base;
+		@apply  text-white ring-indigo-300 bg-sky-700 hover:bg-sky-800 active:bg-sky-900 md:text-base;
 	}
 }
 
